@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SplideSlide } from '@splidejs/react-splide';
-import Slider from '../components/Slider';
+import Slider from '../../components/Slider';
 
 import classes from './ImageSlider.module.scss';
 
@@ -12,15 +12,15 @@ const dummySlideInfo = [
 ];
 
 const ImageSlider = (props) => {
-  const SliderSlide = dummySlideInfo.map(info => (
+  const sliderContent = dummySlideInfo.map(info => (
     <SplideSlide className={classes.slider__slide} key={info.id}>
-      <img src={require(`../assets/images/${info.imgPath}`)} alt={`slide ${info.id}`}/>
+      <img src={require(`../../assets/images/${info.imgPath}`)} alt={`slide ${info.id}`}/>
     </SplideSlide>
   ));
   return (
     <section className='img-slider'>
       <h2>웨딩 사진</h2>
-      <Slider slide={SliderSlide}/>
+      <Slider slide={sliderContent}/>
     </section>
   )
 };

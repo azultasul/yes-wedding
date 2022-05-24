@@ -1,9 +1,10 @@
 import React from 'react';
-import ImageSlider from './layout/ImageSlider';
-import Guest from './layout/Guest';
+import ImageSlider from './section/imageSlider/ImageSlider';
+import Guest from './section/guest/Guest';
 import './App.scss';
 
 function App() {
+  console.log("App");
   return (
     <div className="App">
       {/* <header className="App-header">
