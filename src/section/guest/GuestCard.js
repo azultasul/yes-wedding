@@ -18,11 +18,11 @@ const GuestCard = (props) => {
 
   return (
     <Fragment>
-      <Slider slide={sliderContent} 
+      <Slider
         dataSplide='{
           "type":"loop", "perPage":3, "perMove": 3, "padding":"20px", "gap":"10px", "width":"100%"
         }'
-      />
+      >{sliderContent}</Slider>
     </Fragment>
   )
 }

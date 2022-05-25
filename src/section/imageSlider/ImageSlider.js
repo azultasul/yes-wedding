@@ -20,7 +20,7 @@ const ImageSlider = (props) => {
   return (
     <section className='img-slider'>
       <h2>웨딩 사진</h2>
-      <Slider slide={sliderContent}/>
+      <Slider>{sliderContent}</Slider>
     </section>
   )
 };

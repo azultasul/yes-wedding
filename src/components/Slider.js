@@ -6,7 +6,7 @@ import '@splidejs/react-splide/css';
 const Slider = (props) => {
   return (
     <Splide data-splide={props.dataSplide}>
-      {props.slide}
+      {props.children}
     </Splide>
   );
 };

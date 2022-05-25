@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import GuestCard from './GuestCard';
-import AddGuest from './AddGuest';
+import GuestForm from './GuestForm';
+import GuestList from './GuestList';
+// import AddGuest from './AddGuest';
 
 import classes from './Guest.module.scss';
 
@@ -8,6 +10,8 @@ const Guest = () => {
   console.log("Guest");
   const [guests, setGuests] = useState([]);
   const [error, setError] = useState(null);
+  const [listIsShown, setListIsShown] = useState(false);
+  const [formIsShown, setFormIsShown] = useState(false);
 
   const fetchGuestHandler = useCallback( async () => {
     setError(null);
@@ -53,6 +57,19 @@ const Guest = () => {
     fetchGuestHandler();
     // console.log("data", data);
   }
+
+  const showFormHandler = () => {
+    setFormIsShown(true);
+  }
+  const hideFormHandler = () => {
+    setFormIsShown(false);
+  }
+  const showListHandler = () => {
+    setListIsShown(true);
+  }
+  const hideListHandler = () => {
+    setListIsShown(false);
+  }
   return (
     <section>
       <h2>방명록</h2>
@@ -60,10 +77,11 @@ const Guest = () => {
         {error ? <p>{error}</p> : <GuestCard guestList={guests} />}
       </div>
       <div className={classes.btn}>
-        <button>전체보기</button>
-        <button>방명록 작성</button>
+        <button onClick={showListHandler}>전체보기</button>
+        <button onClick={showFormHandler}>방명록 작성</button>
       </div>
-      <AddGuest onAddGuest={addGuestHandler} />
+      {listIsShown && <GuestList onHideList={hideListHandler} guestList={guests} />}
+      {formIsShown && <GuestForm onHideForm={hideFormHandler} onAddGuest={addGuestHandler} />}
     </section>
   )
 }
