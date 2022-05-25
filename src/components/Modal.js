@@ -9,6 +9,7 @@ const Backdrop = (props) => {
 
 const ModalOverlay = props => {
   return <div className={classes.modal}>
+    <button onClick={props.onClose}>❌</button>
     <div className={classes.content}>{props.children}</div>
   </div>
 }
@@ -19,7 +20,7 @@ const Modal = (props) => {
   return (
     <Fragment>
       {ReactDom.createPortal(<Backdrop onClose={props.onClose}/>, portalElement)}
-      {ReactDom.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)}
+      {ReactDom.createPortal(<ModalOverlay onClose={props.onClose}>{props.children}</ModalOverlay>, portalElement)}
     </Fragment>
   );
 };

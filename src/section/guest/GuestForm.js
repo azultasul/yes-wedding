@@ -11,7 +11,6 @@ const GuestForm = (props) => {
     <Modal onClose={props.onHideForm}>
       <div>방명록 작성</div>
       <AddGuest onAddGuest={props.onAddGuest} />
-      <button onClick={props.onHideForm}>닫기</button>
     </Modal>
   );
 };

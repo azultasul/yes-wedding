@@ -27,7 +27,7 @@ const AddGuest = (props) => {
     const hours = newDate.getHours();
     const minutes = newDate.getMinutes();
 
-    return `${month}월 ${date}일 ${hours}:${minutes}`;
+    return `${month}월 ${date}일 ${hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
   }
   getDate();
   return (
