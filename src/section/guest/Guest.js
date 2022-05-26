@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import GuestCard from './GuestCard';
 import GuestForm from './GuestForm';
 import GuestList from './GuestList';
+// import firebase from '../../util/firebase';
 // import AddGuest from './AddGuest';
 
 import classes from './Guest.module.scss';
@@ -13,6 +14,9 @@ const Guest = () => {
   const [listIsShown, setListIsShown] = useState(false);
   const [formIsShown, setFormIsShown] = useState(false);
 
+  // const guestRef = firebase.database().ref('guest');
+  // console.log("guestRef", guestRef);
+
   const fetchGuestHandler = useCallback( async () => {
     setError(null);
     try {
@@ -23,6 +27,7 @@ const Guest = () => {
       }
 
       const data = await response.json();
+
       const guestList = [];
 
       for (const key in data) {
@@ -46,14 +51,15 @@ const Guest = () => {
   }, [fetchGuestHandler]);
 
   const addGuestHandler = async (guest) => {
-    const response = await fetch('https://yes-wedding-default-rtdb.firebaseio.com/guest.json', {
+    // const response = 
+    await fetch('https://yes-wedding-default-rtdb.firebaseio.com/guest.json', {
       method: 'POST',
       body: JSON.stringify(guest),
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    const data = await response.json();
+    // const data = await response.json();
     fetchGuestHandler();
     // console.log("data", data);
   }

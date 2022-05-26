@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import ReactDom from 'react-dom';
+import React, { useState } from 'react';
+// import ReactDom from 'react-dom';
 
 import EnterPassword from './EnterPassword';
 import Modal from '../../components/Modal';
@@ -27,11 +27,6 @@ const GuestList = (props) => {
     </div>
   ));
   
-
-
-  const test = (guest) => {
-    console.log("guest", guest);
-  }
 
   const setPassModal = (openState, type) => {
     setPassModalIsShown({openState: openState, type: type});

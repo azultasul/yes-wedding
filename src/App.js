@@ -1,7 +1,6 @@
 import React from 'react';
 import ImageSlider from './section/imageSlider/ImageSlider';
 import Guest from './section/guest/Guest';
-import Modal from './components/Modal';
 import './App.scss';
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
       </header> */}
       <ImageSlider />
       <Guest />
-      {/* <Modal /> */}
     </div>
   );
 }
