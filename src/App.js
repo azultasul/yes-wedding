@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageSlider from './section/imageSlider/ImageSlider';
 import Guest from './section/guest/Guest';
+import Map from './section/map/Map';
 import firebase from './util/firebase';
 
 import './App.scss';
@@ -25,7 +26,8 @@ function App() {
         </a>
       </header> */}
       <ImageSlider />
-      <Guest/>
+      <Guest firebase={firebase}/>
+      <Map />
     </div>
   );
 }

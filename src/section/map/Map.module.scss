@@ -1,0 +1,12 @@
+.map {
+  &__cont {
+    width: 90%;
+    height: 350px;
+    margin: 0 auto;
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}

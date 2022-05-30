@@ -40,7 +40,7 @@ const Guest = (props) => {
     }).catch((error) => {
       setError(error.message);
     });
-  }, []);
+  }, [database]);
 
   const addGuestHandler = (guest) => {
     set(push(ref(database, 'guest')), guest);
