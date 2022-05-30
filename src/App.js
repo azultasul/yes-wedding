@@ -1,10 +1,13 @@
 import React from 'react';
 import ImageSlider from './section/imageSlider/ImageSlider';
 import Guest from './section/guest/Guest';
+import firebase from './util/firebase';
+
 import './App.scss';
 
 function App() {
   console.log("App");
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -22,7 +25,7 @@ function App() {
         </a>
       </header> */}
       <ImageSlider />
-      <Guest />
+      <Guest/>
     </div>
   );
 }

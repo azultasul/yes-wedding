@@ -30,13 +30,12 @@ const GuestList = (props) => {
 
   const setPassModal = (openState, type) => {
     setPassModalIsShown({openState: openState, type: type});
-    console.log("openState", openState, type);
   }
 
   return (
     <Modal onClose={props.onHideList}>
       {passModalIsShown.openState 
-        ? <EnterPassword onSetPassModal={() => {setPassModal(false, null)}} type={passModalIsShown.type} currentGuest={currentGuest} /> 
+        ? <EnterPassword onSetPassModal={() => {setPassModal(false, null)}} onFetchGuestHandler={props.onFetchGuestHandler} type={passModalIsShown.type} currentGuest={currentGuest} /> 
         : sliderContent}
     </Modal>
   );

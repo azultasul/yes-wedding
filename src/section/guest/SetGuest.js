@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-const AddGuest = (props) => {
+const SetGuest = (props) => {
   const nameRef = useRef('');
   const passwordRef = useRef('');
   const messageRef = useRef('');
@@ -14,7 +14,7 @@ const AddGuest = (props) => {
       message: messageRef.current.value,
       time: getDate()
     }
-    props.onAddGuest(guestMessage);
+    props.onSetGuest(guestMessage);
 
     nameRef.current.value = '';
     passwordRef.current.value = '';
@@ -43,4 +43,4 @@ const AddGuest = (props) => {
   )
 }
 
-export default AddGuest;
+export default SetGuest;

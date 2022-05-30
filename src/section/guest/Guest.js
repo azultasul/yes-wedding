@@ -1,68 +1,58 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { getDatabase, ref, push, set, child, get } from "firebase/database"; 
+
 import GuestCard from './GuestCard';
 import GuestForm from './GuestForm';
 import GuestList from './GuestList';
-// import firebase from '../../util/firebase';
-// import AddGuest from './AddGuest';
 
 import classes from './Guest.module.scss';
 
-const Guest = () => {
-  console.log("Guest");
+const Guest = (props) => {
   const [guests, setGuests] = useState([]);
   const [error, setError] = useState(null);
   const [listIsShown, setListIsShown] = useState(false);
   const [formIsShown, setFormIsShown] = useState(false);
+  const database = getDatabase();
 
-  // const guestRef = firebase.database().ref('guest');
-  // console.log("guestRef", guestRef);
-
-  const fetchGuestHandler = useCallback( async () => {
+  const fetchGuestHandler = useCallback(() => {
     setError(null);
-    try {
-      const response = await fetch('https://yes-wedding-default-rtdb.firebaseio.com/guest.json');
-      
-      if (!response.ok) {
-        throw new Error('Something went wrong!');
+    get(child(ref(database), `guest/`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+
+        const guestList = [];
+  
+        for (const key in data) {
+          guestList.push({
+            id: key,
+            name: data[key].name,
+            password: data[key].password,
+            message: data[key].message,
+            time: data[key].time
+          })
+        };
+  
+        setGuests(guestList);
+
+      } else {
+        setError("No data available");
       }
-
-      const data = await response.json();
-
-      const guestList = [];
-
-      for (const key in data) {
-        guestList.push({
-          id: key,
-          name: data[key].name,
-          password: data[key].password,
-          message: data[key].message,
-          time: data[key].time
-        })
-      };
-
-      setGuests(guestList);
-    } catch (error) {
+    }).catch((error) => {
       setError(error.message);
-    }
+    });
   }, []);
+
+  const addGuestHandler = (guest) => {
+    set(push(ref(database, 'guest')), guest);
+
+    fetchGuestHandler();
+    setFormIsShown(false);
+  }
 
   useEffect(() => {
     fetchGuestHandler();
   }, [fetchGuestHandler]);
 
-  const addGuestHandler = async (guest) => {
-    // const response = 
-    await fetch('https://yes-wedding-default-rtdb.firebaseio.com/guest.json', {
-      method: 'POST',
-      body: JSON.stringify(guest),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    // const data = await response.json();
-    fetchGuestHandler();
-    // console.log("data", data);
-  }
 
   const showFormHandler = () => {
     setFormIsShown(true);
@@ -86,8 +76,8 @@ const Guest = () => {
         <button onClick={showListHandler}>전체보기</button>
         <button onClick={showFormHandler}>방명록 작성</button>
       </div>
-      {listIsShown && <GuestList onHideList={hideListHandler} guestList={guests} />}
-      {formIsShown && <GuestForm onHideForm={hideFormHandler} onAddGuest={addGuestHandler} />}
+      {listIsShown && <GuestList onHideList={hideListHandler} guestList={guests} onFetchGuestHandler={fetchGuestHandler} />}
+      {formIsShown && <GuestForm onHideForm={hideFormHandler} onSetGuest={addGuestHandler} />}
     </section>
   )
 }

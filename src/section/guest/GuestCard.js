@@ -6,8 +6,6 @@ import Slider from '../../components/Slider';
 import classes from './GuestCard.module.scss';
 
 const GuestCard = (props) => {
-  console.log("GuestCard");
-
   const sliderContent = props.guestList.map(guest => (
     <SplideSlide className={classes.card} key={guest.id}>
       <div>{guest.name}</div>

@@ -1,41 +1,56 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import { getDatabase, ref, set, remove } from "firebase/database";
 
 import Modal from '../../components/Modal';
-// import AddGuest from './AddGuest';
+import SetGuest from './SetGuest';
 // import classes from './Modal.module.scss';
 
 
 const EnterPassword = (props) => {
+  const [isUpdateForm, setIsUpdateForm] = useState(false);
   const passwordRef = useRef('');
+  const currentGuest = props.currentGuest;
+  const database = getDatabase();
+
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    // 비밀번호 validation
-    // passwordRef.current.value 
-    console.log("test", props.currentGuest.password, passwordRef.current.value);
-    if (props.currentGuest.password === passwordRef.current.value) {
+    if (currentGuest.password === passwordRef.current.value) {
       if (props.type === 'update') {
-        console.log("update");
+        setIsUpdateForm(true);
       } else if (props.type === 'delete') {
-        console.log("delete", props.currentGuest);
-        const url = `https://yes-wedding-default-rtdb.firebaseio.com/guest.json/${props.currentGuest.id}`
-
-        fetch(url, { method: 'DELETE' });
-        // const data = await response.json();
+        deleteGuestHandler();
       }
-      // 방명록 작성 모달(current.value있는 상태)
     } else {
       alert("비밀번호가 틀립니다🥲");
       passwordRef.current.value = '';
     }
   };
 
+  const updateGuestHandler = (guest) => {
+    set(ref(database, 'guest/' + currentGuest.id), guest);
+    props.onFetchGuestHandler();
+    props.onSetPassModal();
+  };
+  const deleteGuestHandler = () => {
+    remove(ref(database, 'guest/' + currentGuest.id));
+    props.onFetchGuestHandler();
+    alert("삭제 성공🤟");
+    props.onSetPassModal();
+  };
+
+  const passwordForm = (
+    <form onSubmit={onSubmitHandler}>
+      <label htmlFor="password">비밀번호</label>
+      <input type="text" id='password' ref={passwordRef}/>
+      <button>확인</button>
+    </form>
+  )
+
   return (
     <Modal onClose={props.onSetPassModal}>
-      <form onSubmit={onSubmitHandler}>
-        <label htmlFor="password">비밀번호</label>
-        <input type="text" id='password' ref={passwordRef}/>
-        <button>확인</button>
-      </form>
+      { isUpdateForm ? 
+        <SetGuest onSetGuest={updateGuestHandler} /> : 
+        passwordForm }
     </Modal>
   );
 };
