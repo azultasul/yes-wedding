@@ -2,6 +2,7 @@ import React from 'react';
 import ImageSlider from './section/imageSlider/ImageSlider';
 import Guest from './section/guest/Guest';
 import Map from './section/map/Map';
+import Heart from './section/heart/Heart';
 import firebase from './util/firebase';
 
 import './App.scss';
@@ -28,6 +29,7 @@ function App() {
       <ImageSlider />
       <Guest firebase={firebase}/>
       <Map />
+      <Heart />
     </div>
   );
 }
