@@ -1,0 +1,23 @@
+.slider {
+  &__slide {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.image {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  &-wrap {
+    display: flex;
+    height: 650px;
+    overflow: hidden;
+  }
+  &-inr {
+    margin: 0 5px;
+  }
+}

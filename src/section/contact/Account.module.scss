@@ -1,0 +1,16 @@
+.account {
+  display: flex;
+  justify-content: space-between;
+  &__btn {
+    display: block;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+    &-wrap {
+      margin-left: 16px;
+    }
+  }
+}

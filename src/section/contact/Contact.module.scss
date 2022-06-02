@@ -1,0 +1,13 @@
+.contact {
+  &__self {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__parent {
+    &-wrap {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 64px;
+    }
+  }
+}

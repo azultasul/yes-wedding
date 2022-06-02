@@ -114,6 +114,27 @@ html{
 
 
 /* 임시 CSS */
+// section {
+//   margin-top: 30px;
+// 	&#kv {
+// 		margin-top: 0;
+// 	}
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+
+body {
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 section {
-  margin-top: 30px;
+	margin-top: 100px;
+	&#kv {
+		margin-top: 0;
+	}
+}
+.section-tit {
+	font-size: 25px;
 }

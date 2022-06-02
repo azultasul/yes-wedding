@@ -67,7 +67,8 @@ const Guest = (props) => {
     setListIsShown(false);
   }
   return (
-    <section>
+    <section id='guest'>
+      <div className='section-tit'>🌺</div>
       <h2>방명록</h2>
       <div className={classes.cards}>
         {error ? <p>{error}</p> : <GuestCard guestList={guests} />}

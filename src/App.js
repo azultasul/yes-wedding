@@ -1,9 +1,11 @@
 import React from 'react';
-import ImageSlider from './section/imageSlider/ImageSlider';
+import Kv from './section/kv/Kv';
+import Gallery from './section/gallery/Gallery';
 import Guest from './section/guest/Guest';
 import Map from './section/map/Map';
-import Heart from './section/heart/Heart';
+import Contact from './section/contact/Contact';
 import firebase from './util/firebase';
+import Footer from './section/footer/Footer';
 
 import './App.scss';
 
@@ -12,24 +14,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          first commit test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <ImageSlider />
+      <Kv></Kv>
+      <Gallery />
       <Guest firebase={firebase}/>
       <Map />
-      <Heart />
+      <Contact />
+      <Footer></Footer>      
     </div>
   );
 }

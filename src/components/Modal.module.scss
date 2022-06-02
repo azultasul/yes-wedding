@@ -6,13 +6,21 @@
   bottom: 0;
   background-color: black;
   opacity: 0.3;
+  z-index: 9999;
 }
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: aliceblue;
-  padding: 30px;
+  background-color: #dfe5ea;
+  padding-top: 40px;
+  padding-bottom: 40px;
   border-radius: 15px;
+  z-index: 9999;
+  &__btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
 }
