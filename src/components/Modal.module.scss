@@ -20,6 +20,8 @@
   z-index: 9999;
   width: 85%;
   max-width: 380px;
+  max-height: 70%;
+  overflow-y: scroll;
   &__btn {
     position: absolute;
     right: 12px;

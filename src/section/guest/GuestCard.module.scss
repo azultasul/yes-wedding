@@ -1,6 +1,27 @@
 .card {
-  padding: 15px;
-  background-color: blanchedalmond;
+  position: relative;
   font-family: 'Poor Story', cursive;
   // font-family: 'Gamja Flower', cursive;
+  img {
+    border-radius: 10px;
+  }
+  &__cont {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 15px;
+    &--message {
+      margin-top: 8px;
+      max-height: 155px;
+      overflow-y: scroll;
+    }
+    &--time {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 15px;
+    }
+  }
 }

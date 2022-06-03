@@ -148,3 +148,14 @@ section {
 .section-flower {
 	font-size: 25px;
 }
+
+input, textarea {
+	padding: 4px;
+	border: 0;
+	border-bottom: 1px solid #7c7f7f;
+	background-color: transparent;
+	font-size: 16px;
+}
+textarea {
+	// border: 1px solid #7c7f7f;
+}

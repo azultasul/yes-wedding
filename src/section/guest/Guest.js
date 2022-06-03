@@ -43,6 +43,16 @@ const Guest = (props) => {
   }, [database]);
 
   const addGuestHandler = (guest) => {
+    if (guest.name === '') {
+      alert("이름을 입력해주세요😥");
+      return;
+    } else if (guest.password === '') {
+      alert("비밀번호를 입력해주세요🙏");
+      return;
+    } else if (guest.message === '') {
+      alert("메시지를 입력해주세요😢");
+      return;
+    }
     set(push(ref(database, 'guest')), guest);
 
     fetchGuestHandler();
@@ -68,7 +78,7 @@ const Guest = (props) => {
   }
   return (
     <section id='guest'>
-      <div className='section-flower'>🌺</div>
+      <div className='section-flower'>🌷</div>
       <h2>방명록</h2>
       <div className={classes.cards}>
         {error ? <p>{error}</p> : <GuestCard guestList={guests} />}

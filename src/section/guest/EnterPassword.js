@@ -3,7 +3,7 @@ import { getDatabase, ref, set, remove } from "firebase/database";
 
 import Modal from '../../components/Modal';
 import SetGuest from './SetGuest';
-// import classes from './Modal.module.scss';
+import classes from './EnterPassword.module.scss';
 
 
 const EnterPassword = (props) => {
@@ -39,10 +39,10 @@ const EnterPassword = (props) => {
   };
 
   const passwordForm = (
-    <form onSubmit={onSubmitHandler}>
-      <label htmlFor="password">비밀번호</label>
-      <input type="text" id='password' ref={passwordRef}/>
-      <button>확인</button>
+    <form onSubmit={onSubmitHandler} className={classes['container']}>
+      <label htmlFor="password"></label>
+      <input type="text" id='password' placeholder='비밀번호' ref={passwordRef} className={classes['password']}/>
+      <button className={classes['btn']}>확인</button>
     </form>
   )
 

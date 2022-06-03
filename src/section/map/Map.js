@@ -25,7 +25,7 @@ const Map = (props) => {
 
   return (
     <section id='map'>
-      <div className='section-flower'>🌷</div>
+      <div className='section-flower'>🌺</div>
       <h2>오시는 길</h2>
       <h3 className={classes['place']}>
         상록아트홀 L층 그랜드볼룸홀<br/>

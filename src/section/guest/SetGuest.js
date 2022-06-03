@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 
+import classes from './SetGuest.module.scss';
+
 const SetGuest = (props) => {
   const nameRef = useRef('');
   const passwordRef = useRef('');
@@ -32,13 +34,15 @@ const SetGuest = (props) => {
   getDate();
   return (
     <form onSubmit={onSubmitHandler}>
-      <label htmlFor="name">이름</label>
-      <input type="text" id='name' ref={nameRef}/>
-      <label htmlFor="password">비밀번호</label>
-      <input type="text" id='password' ref={passwordRef}/>
-      <label htmlFor="message">메시지</label>
-      <input type="text" id='message' ref={messageRef}/>
-      <button>방명록 작성</button>
+      <div className={classes['cont__info']}>
+        <label htmlFor="name"></label>
+        <input type="text" id='name' placeholder='이름' ref={nameRef} className={classes['cont__name']}/>
+        <label htmlFor="password"></label>
+        <input type="text" id='password' placeholder='비밀번호' ref={passwordRef} className={classes['cont__password']}/>
+      </div>
+      <label htmlFor="message"></label>
+      <textarea type="text" id='message' placeholder='메시지' ref={messageRef} className={classes['cont__message']}/>
+      <button className={classes['cont__btn']}>방명록 작성</button>
     </form>
   )
 }
