@@ -25,7 +25,7 @@ const Map = (props) => {
 
   return (
     <section id='map'>
-      <div className='section-tit'>🌷</div>
+      <div className='section-flower'>🌷</div>
       <h2>오시는 길</h2>
       <div id="map-cont" className={classes.map__cont}></div>
       <div className={classes.map__btn}>

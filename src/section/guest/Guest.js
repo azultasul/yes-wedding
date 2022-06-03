@@ -68,7 +68,7 @@ const Guest = (props) => {
   }
   return (
     <section id='guest'>
-      <div className='section-tit'>🌺</div>
+      <div className='section-flower'>🌺</div>
       <h2>방명록</h2>
       <div className={classes.cards}>
         {error ? <p>{error}</p> : <GuestCard guestList={guests} />}

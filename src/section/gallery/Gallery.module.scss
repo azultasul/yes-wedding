@@ -12,12 +12,59 @@
   width: 100%;
   border-radius: 15px;
   overflow: hidden;
+  margin-top: 10px;
+  &:first-child {
+    margin-top: 0;
+  }
   &-wrap {
-    display: flex;
-    height: 650px;
+    height: 550px;
     overflow: hidden;
+    margin-top: 60px;
+    transition: height 0.25s ease-in-out;
+    &-show {
+      height: auto;
+    }
   }
   &-inr {
+    display: flex;
+  }
+  &-row {
     margin: 0 5px;
+  }
+  &__btn {
+    width: 12px;
+    margin-right: 10px;
+    &--down {
+      transform: rotate(-90deg);
+    }
+    &--top {
+      transform: rotate(90deg);
+    }
+    path {
+      animation: arrow 1.8s ease 0s infinite;
+      &:first-child {
+        animation: arrow 1.8s ease 0.2s infinite;
+      }
+    }
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 10px;
+      font-family: 'Gowun Batang', serif;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0; transform: translateX(50%);
+  }
+  60% {
+    opacity: 1; transform: translateX(0%);
+  }
+  100% {
+    opacity: 0; transform: translateX(0%);
   }
 }

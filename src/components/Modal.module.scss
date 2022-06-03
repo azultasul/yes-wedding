@@ -18,9 +18,13 @@
   padding-bottom: 40px;
   border-radius: 15px;
   z-index: 9999;
+  width: 85%;
+  max-width: 380px;
   &__btn {
     position: absolute;
     right: 12px;
-    top: 12px;
+    top: 4px;
+    font-size: 28px;
+    color: #7c7f7f;
   }
 }

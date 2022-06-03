@@ -123,18 +123,28 @@ html{
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
 
 
 body {
 	font-family: 'IBM Plex Sans KR', sans-serif;
+	color: #172144;
 }
 
 section {
-	margin-top: 100px;
+	margin-top: 120px;
 	&#kv {
 		margin-top: 0;
 	}
+	h2 {
+		font-family: 'Gowun Batang', serif;
+		font-size: 18px;
+		font-weight: 600;
+		margin: 24px 0 32px;
+	}
 }
-.section-tit {
+.section-flower {
 	font-size: 25px;
 }

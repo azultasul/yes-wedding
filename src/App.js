@@ -16,8 +16,8 @@ function App() {
     <div className="App">
       <Kv></Kv>
       <Gallery />
-      <Guest firebase={firebase}/>
       <Map />
+      <Guest firebase={firebase}/>
       <Contact />
       <Footer></Footer>      
     </div>

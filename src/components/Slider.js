@@ -5,7 +5,7 @@ import '@splidejs/react-splide/css';
 
 const Slider = (props) => {
   return (
-    <Splide data-splide={props.dataSplide}>
+    <Splide hasTrack={props.hasTrack} data-splide={props.dataSplide}>
       {props.children}
     </Splide>
   );

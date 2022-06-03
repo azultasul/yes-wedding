@@ -15,6 +15,7 @@ const Kv = (props) => {
           <div className={classes['kv__tit-sub']}>2022.00.00 Sat 12:00</div>
         </div>
       </div>
+      <div className='section-flower'>💐</div>
       <div className={classes['cont-wrap']}>
         <div className={classes['cont']}>
           서로가 마주보며 다져온 사랑을<br/>

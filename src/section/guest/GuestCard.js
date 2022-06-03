@@ -18,7 +18,7 @@ const GuestCard = (props) => {
     <Fragment>
       <Slider
         dataSplide='{
-          "type":"loop", "perPage":3, "perMove": 3, "padding":"20px", "gap":"10px", "width":"100%"
+          "type":"loop", "perPage":3, "perMove": 1, "padding":"20px", "gap":"10px", "width":"100%", "pagination": false, "arrows": false
         }'
       >{sliderContent}</Slider>
     </Fragment>

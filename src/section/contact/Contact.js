@@ -58,7 +58,7 @@ const Contact = (props) => {
 
   return (
     <section id='contact'>
-      <div className='section-tit'>🌹</div>
+      <div className='section-flower'>🌹</div>
       <h2>마음 전하기</h2>
       <div className={`${classes['contact__self']}`}>
         <ContactItem contactItem={contactInfo.groom.self}></ContactItem>
