@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 
+if (!window.Kakao.isInitialized()) {
+  window.Kakao.init(process.env.REACT_APP_KAKAO_APPKEY);
+  console.log("Kakao", window.Kakao.isInitialized());
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
