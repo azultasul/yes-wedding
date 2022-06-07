@@ -1,4 +1,5 @@
 .slider {
+  padding-bottom: 12px;
   &__slide {
     display: flex;
     img {
@@ -9,7 +10,7 @@
     background: none;
     top: auto;
     bottom: 0;
-    transform: translate(0, 110%);
+    transform: translate(0, 115%);
     opacity: 1;
     svg path {
       fill: #7c7f7f;
@@ -27,8 +28,6 @@
     position: absolute;
     left: 50%;
     bottom: 0%;
-    transform: translate(-50%, 160%);
+    transform: translate(-50%, 180%);
   }
 }
-
-

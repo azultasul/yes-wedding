@@ -14,8 +14,8 @@ const ContactItem = (props) => {
     setAccountIsShown(false);
   }
   return (
-    <div className={`${classes['contact__cont']}`}>
-      <div>{contactItem.name}</div>
+    <div>
+      <div className={`${classes['contact__name']}`}>{contactItem.name}</div>
       <div className={`${classes['contact__btn-wrap']}`}>
         <a href={`tel:${contactItem.telephone}`} className={`${classes['contact__btn']}`}>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

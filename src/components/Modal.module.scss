@@ -13,14 +13,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #dfe5ea;
+  background-color: #f2f9f8;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 32px;
   border-radius: 15px;
   z-index: 9999;
   width: 85%;
   max-width: 380px;
-  max-height: 70%;
+  max-height: 85%;
   overflow-y: scroll;
   &__btn {
     position: absolute;

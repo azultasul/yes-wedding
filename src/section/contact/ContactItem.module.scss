@@ -5,12 +5,17 @@
       justify-content: space-around;
     }
   }
+  &__name {
+    font-weight: 500;
+  }
   &__btn {
     margin-left: 4px;
     margin-right: 4px;
     &-wrap {  
       display: flex;
       justify-content: space-around;
+      align-items: center;
+      margin-top: 12px;
     }
   }
 }

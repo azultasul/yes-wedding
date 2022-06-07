@@ -1,6 +1,7 @@
 import React from 'react';
 import Kv from './section/kv/Kv';
 import Gallery from './section/gallery/Gallery';
+import Calendar from './section/calendar/Calendar';
 import Guest from './section/guest/Guest';
 import Map from './section/map/Map';
 import Contact from './section/contact/Contact';
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Kv></Kv>
       <Gallery />
+      <Calendar />
       <Map />
       <Guest firebase={firebase}/>
       <Contact />

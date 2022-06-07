@@ -64,16 +64,17 @@ const Contact = (props) => {
         <ContactItem contactItem={contactInfo.groom.self}></ContactItem>
         <ContactItem contactItem={contactInfo.bride.self}></ContactItem>
       </div>
+      <h2 className={`${classes['contact__parent']}`}>혼주에게 전하기</h2>
       <div className={`${classes['contact__parent-wrap']}`}>
-        <div className={`${classes['contact__parent']}`}>
-          <div>신랑측 혼주</div>
-          <ContactItem contactItem={contactInfo.groom.mother}></ContactItem>
+        <div className={`${classes['parent']}`}>
+          <span className={`${classes['parent__cat']}`}>신랑측 혼주</span>
           <ContactItem contactItem={contactInfo.groom.father}></ContactItem>
+          <ContactItem contactItem={contactInfo.groom.mother}></ContactItem>
         </div>
-        <div className={`${classes['contact__parent']}`}>
-          <div>신부측 혼주</div>
-          <ContactItem contactItem={contactInfo.bride.mother}></ContactItem>
+        <div className={`${classes['parent']}`}>
+          <span className={`${classes['parent__cat']}`}>신부측 혼주</span>
           <ContactItem contactItem={contactInfo.bride.father}></ContactItem>
+          <ContactItem contactItem={contactInfo.bride.mother}></ContactItem>
         </div>
       </div>
     </section>

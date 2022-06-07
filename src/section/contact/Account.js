@@ -17,13 +17,15 @@ const Account = (props) => {
   )
   const accountItem = (
     <div className={classes['account']}>
-      <div className={classes['account__num-wrap']}>
+      <div className={classes['account__num']}>
         <div>{account['account-num']}</div>
-        <div>{account['account-bank']}</div>
-        <div>{account['account-name']}</div>
+        <div className={classes['account__inr']}>
+          <div>{account['account-bank']}&nbsp;/&nbsp;</div>
+          <div>{account['account-name']}</div>
+        </div>
       </div>
       <div className={classes['account__btn-wrap']}>
-        <CopyToClipboard text={`${account['account-bank']} ${account['account-num']} ${account['account-name']}`}>
+        <CopyToClipboard className={classes['account__btn']} text={`${account['account-bank']} ${account['account-num']} ${account['account-name']}`}>
           <button onClick={copyHandler}>복사하기</button>
         </CopyToClipboard>
         {account.kakao && kakao}
