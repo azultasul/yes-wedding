@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yes-wedding/static/css/main.64b50ffe.css",
-    "main.js": "/yes-wedding/static/js/main.ade291db.js",
+    "main.css": "/yes-wedding/static/css/main.5d448dc4.css",
+    "main.js": "/yes-wedding/static/js/main.aeeef02b.js",
     "static/media/kv.jpeg": "/yes-wedding/static/media/kv.2c4421139bb1aca7d9b4.jpeg",
     "static/media/dummy-2.jpg": "/yes-wedding/static/media/dummy-2.9d511b629936fbf17808.jpg",
     "static/media/kakaopay.png": "/yes-wedding/static/media/kakaopay.6779b605870ee0eb8ab0.png",
@@ -9,11 +9,11 @@
     "static/media/dummy-1.jpg": "/yes-wedding/static/media/dummy-1.a95c4474fa66a95160da.jpg",
     "static/media/dummy-3.jpg": "/yes-wedding/static/media/dummy-3.287078f8a9775f0aa2c3.jpg",
     "index.html": "/yes-wedding/index.html",
-    "main.64b50ffe.css.map": "/yes-wedding/static/css/main.64b50ffe.css.map",
-    "main.ade291db.js.map": "/yes-wedding/static/js/main.ade291db.js.map"
+    "main.5d448dc4.css.map": "/yes-wedding/static/css/main.5d448dc4.css.map",
+    "main.aeeef02b.js.map": "/yes-wedding/static/js/main.aeeef02b.js.map"
   },
   "entrypoints": [
-    "static/css/main.64b50ffe.css",
-    "static/js/main.ade291db.js"
+    "static/css/main.5d448dc4.css",
+    "static/js/main.aeeef02b.js"
   ]
 }
