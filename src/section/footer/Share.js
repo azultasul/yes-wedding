@@ -25,7 +25,6 @@ const Share = (props) => {
   return (
     <Modal onClose={props.onClose}>
       <div className={classes['share']}>
-        {/* <button>큐알</button> */}
         <CopyToClipboard text="https://azultasul.github.io/yes-wedding">
           <button onClick={copyHandler} className={classes['share__btn']}>
             <div className={classes['share__img-wrap']}>

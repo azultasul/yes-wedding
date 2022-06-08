@@ -16,6 +16,16 @@ const SetGuest = (props) => {
       message: messageRef.current.value,
       time: getDate()
     }
+    if (guestMessage.name === '') {
+      alert("이름을 입력해주세요😥");
+      return;
+    } else if (guestMessage.password === '') {
+      alert("비밀번호를 입력해주세요🙏");
+      return;
+    } else if (guestMessage.message === '') {
+      alert("메시지를 입력해주세요😢");
+      return;
+    }
     props.onSetGuest(guestMessage);
 
     nameRef.current.value = '';

@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# 리액트로 청첩장 제작🤵‍♂️👰‍♀️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎉
+리액트 공부를 하면서 매일 강의만 듣기엔 지루하고 늘어지는 경향이 있다.\
+뭘 만들면 좋을까 고민하다 언니의 상견례 날짜가 잡혔고 모바일 청첩장을 만들면 좋겠단 생각이 들었다.\
+사실 청첩장을 만드는 것보다 리액트 공부가 더 큰 목적이기 때문에 디자인과 구성은 평범하게 했다.\\
+계획, 각 섹션 내용, 발생한 이슈 등은 노션에 정리하며 작업!
+[더 살펴보기](https://confused-socks-580.notion.site/c69bf23ca94a41af81da58279c506507)\
+배포는 깃헙 블로그를 사용!
+[청첩장 구경하기](https://azultasul.github.io/yes-wedding/)
+---
+## 📍Library Used
+이미지 슬라이더: [splide.js](https://splidejs.com/integration/react-splide/)
+송금: [클립보드 복사](https://www.npmjs.com/package/react-copy-to-clipboard)
+## 📍API Used
+지도: [카카오 지도](https://apis.map.kakao.com/web/)
+송금: [카카오 송금](https://developers.kakaopay.com/docs/moneytransfer/sendmoney.link/sendmoney.link-common)
+공유: [카카오 메시지](https://developers.kakao.com/docs/latest/ko/message/js)
+## 📍Database
+방멱록: [firebase](https://console.firebase.google.com)
+## 📍Project Stack
+- React
+- css module(scss)

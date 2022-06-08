@@ -39,17 +39,19 @@ const EnterPassword = (props) => {
   };
 
   const passwordForm = (
-    <form onSubmit={onSubmitHandler} className={classes['container']}>
+    <form onSubmit={onSubmitHandler} className={classes['form']}>
       <label htmlFor="password"></label>
-      <input type="text" id='password' placeholder='비밀번호' ref={passwordRef} className={classes['password']}/>
-      <button className={classes['btn']}>확인</button>
+      <input type="text" id='password' placeholder='비밀번호' ref={passwordRef} className={classes['form__password']}/>
+      <button className={classes['form__btn']}>확인</button>
     </form>
   )
 
   return (
     <Modal onClose={props.onSetPassModal}>
       { isUpdateForm ? 
-        <SetGuest onSetGuest={updateGuestHandler} /> : 
+        <div className={classes['set-guest']}>
+          <SetGuest onSetGuest={updateGuestHandler} />
+        </div> : 
         passwordForm }
     </Modal>
   );
