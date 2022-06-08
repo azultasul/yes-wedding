@@ -68,9 +68,9 @@ const Guest = (props) => {
   }
   return (
     <section id='guest'>
-      <div className='section-flower'>🌷</div>
-      <h2>방명록</h2>
-      <div className={classes.cards}>
+      <div data-gsap="opacity" className='section-flower'>🌷</div>
+      <h2 data-gsap="show-up">방명록</h2>
+      <div data-gsap="show-up" className={classes.cards}>
         {error ? <p>{error}</p> : <GuestCard guestList={guests} />}
       </div>
       <div className={classes.btn}>

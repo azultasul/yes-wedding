@@ -59,8 +59,8 @@ const Gallery = (props) => {
 
   return (
     <section id='gallery'>
-      <div className='section-flower'>🌻</div>
-      <div id='image-wrap' className={classes['image-wrap']}>
+      <div data-gsap="opacity" className='section-flower'>🌻</div>
+      <div data-gsap="show-up" id='image-wrap' className={classes['image-wrap']}>
         <div className={classes['image-inr']}>
           <div className={classes['image-row']}>{ImagesOdd}</div>
           <div className={classes['image-row']}>{ImagesEven}</div>
