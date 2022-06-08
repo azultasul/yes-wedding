@@ -1,0 +1,32 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 9999;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f9f8;
+  padding-top: 40px;
+  padding-bottom: 32px;
+  border-radius: 15px;
+  z-index: 9999;
+  width: 85%;
+  max-width: 380px;
+  max-height: 85%;
+  overflow-y: scroll;
+  &__btn {
+    position: absolute;
+    right: 12px;
+    top: 4px;
+    font-size: 28px;
+    color: #7c7f7f;
+  }
+}

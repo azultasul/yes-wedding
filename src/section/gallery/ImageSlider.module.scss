@@ -1,0 +1,33 @@
+.slider {
+  padding-bottom: 12px;
+  &__slide {
+    display: flex;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__arrow {
+    background: none;
+    top: auto;
+    bottom: 0;
+    transform: translate(0, 115%);
+    opacity: 1;
+    svg path {
+      fill: #7c7f7f;
+    }
+    &--prev {
+      left: auto;
+      right: 58%;
+    }
+    &--next {
+      right: auto;
+      left: 58%;
+    }
+  }
+  &__num {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 180%);
+  }
+}

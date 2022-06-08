@@ -1,0 +1,28 @@
+.contact {
+  &__self {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__parent {
+    margin-top: 64px;
+    &-wrap {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+.parent {
+  & > div {
+    margin-top: 28px;
+    &:nth-child(3) {
+      margin-top: 40px;
+    }
+  }
+  &__cat {
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #7c7f7f;
+    margin-top: 0px;
+    font-weight: 600;
+  }
+}
