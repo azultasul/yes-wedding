@@ -20,7 +20,7 @@ const Account = (props) => {
       <div className={classes['account__num']}>
         <div>{account['account-num']}</div>
         <div className={classes['account__inr']}>
-          <div>{account['account-bank']}&nbsp;/&nbsp;</div>
+          <div>{account['account-bank']}은행&nbsp;/&nbsp;</div>
           <div>{account['account-name']}</div>
         </div>
       </div>

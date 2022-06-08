@@ -1,6 +1,26 @@
 .share {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 24px;
   padding-right: 24px;
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img {
+    width: 25px;
+    &-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(232, 232, 232);
+      border-radius: 50%;
+    }
+  }
+  &__text {
+    margin-top: 8px;
+  }
 }

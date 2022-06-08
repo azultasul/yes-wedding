@@ -1,0 +1,27 @@
+.footer {
+  padding-bottom: 24px;
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 24px;
+    margin-left: auto;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #172144;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__text {
+    margin-top: 4px;
+    font-weight: 500;
+  }
+}

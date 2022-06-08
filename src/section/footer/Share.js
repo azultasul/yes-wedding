@@ -1,30 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Modal from '../../components/Modal';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-// const { Kakao } = window;
 import classes from './Share.module.scss';
 
 
 const Share = (props) => {
-  // useEffect(() => {
-  //   window.Kakao.Link.createCustomButton({
-  //     container: "#kakao-share",
-  //     templateId: 77876,
-  //   });
-  //   console.log("useEffect");
-  // },[]);
-  // const shareKaKao = () => {
-  //   console.log("shareKaKao");
-  // }
+  const shareKaKao = () => {
+    window.Kakao.Link.createCustomButton({
+      container: "#kakao-share",
+      templateId: 77876,
+    });
+  }
   const onShareKakaoClick = () => {
-    // window.Kakao.Link.sendCustom({
-    //   container: "#kakao-share",
-    //   templateId: 77876,
-    // });
-    // // shareKaKao();
-    console.log("onShareKakaoClick");
+    shareKaKao();
   };
+  useEffect(() => {
+    shareKaKao();
+  },[]);
 
   const copyHandler = () => {
     alert("링크 복사🤟");
@@ -32,11 +25,21 @@ const Share = (props) => {
   return (
     <Modal onClose={props.onClose}>
       <div className={classes['share']}>
-        <button>큐알</button>
+        {/* <button>큐알</button> */}
         <CopyToClipboard text="https://azultasul.github.io/yes-wedding">
-          <button onClick={copyHandler}>링크 복사</button>
+          <button onClick={copyHandler} className={classes['share__btn']}>
+            <div className={classes['share__img-wrap']}>
+              <img className={classes['share__img']} src={require('../../assets/images/link.png')} alt='link copy'/>
+            </div>
+            <span className={classes['share__text']}>링크 복사</span>
+          </button>
         </CopyToClipboard>
-        <button id="kakao-share" onClick={onShareKakaoClick}>카카오</button>
+        <button id="kakao-share" onClick={onShareKakaoClick} className={classes['share__btn']}>
+          <div className={classes['share__img-wrap']}>
+            <img src={require('../../assets/images/kakaoShare.png')} alt='link copy'/>
+          </div>
+          <span className={classes['share__text']}>카카오톡 공유</span>
+        </button>
       </div>
     </Modal>
   )

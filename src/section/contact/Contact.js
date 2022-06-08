@@ -9,23 +9,23 @@ const Contact = (props) => {
     'groom': {
       'self': {
         'name': '신랑 윤여웅',
-        'telephone': '010-2013-5513',
-        'account-num': '3020648196361',
+        'telephone': '010-1234-5678',
+        'account-num': '1234567890123',
         'account-bank': '농협',
         'account-name': '유다솔',
         'kakao': 'http://kko.to/T7HuzTh80'
       },
       'father': {
         'name': '아버지 윤여웅',
-        'telephone': '010-2013-5513',
-        'account-num': '3020648196361',
+        'telephone': '010-1234-5678',
+        'account-num': '1234567890123',
         'account-bank': '농협',
         'account-name': '유다솔',
       },
       'mother': {
         'name': '어머니 윤여웅',
-        'telephone': '010-2013-5513',
-        'account-num': '3020648196361',
+        'telephone': '010-1234-5678',
+        'account-num': '1234567890123',
         'account-bank': '농협',
         'account-name': '유다솔',
       },
@@ -33,23 +33,23 @@ const Contact = (props) => {
     'bride': {
       'self': {
         'name': '신부 유은솔',
-        'telephone': '010-2013-5513',
-        'account-num': '3020648196361',
+        'telephone': '010-1234-5678',
+        'account-num': '1234567890123',
         'account-bank': '농협',
         'account-name': '유다솔',
         'kakao': 'http://kko.to/T7HuzTh80'
       },
       'father': {
         'name': '아버지 유은솔',
-        'telephone': '010-2013-5513',
-        'account-num': '3020648196361',
+        'telephone': '010-1234-5678',
+        'account-num': '1234567890123',
         'account-bank': '농협',
         'account-name': '유다솔',
       },
       'mother': {
         'name': '어머니 유은솔',
-        'telephone': '010-2013-5513',
-        'account-num': '3020648196361',
+        'telephone': '010-1234-5678',
+        'account-num': '1234567890123',
         'account-bank': '농협',
         'account-name': '유다솔',
       },
