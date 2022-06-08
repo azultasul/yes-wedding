@@ -19,3 +19,7 @@
 지도: [카카오 지도](https://apis.map.kakao.com/web/)\
 송금: [카카오 송금](https://developers.kakaopay.com/docs/moneytransfer/sendmoney.link/sendmoney.link-common)\
 공유: [카카오 메시지](https://developers.kakao.com/docs/latest/ko/message/js)
+
+## 🛠개발
+- npm run start
+- npm run deploy
