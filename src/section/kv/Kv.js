@@ -1,38 +1,33 @@
 import React, { useRef, useEffect } from 'react';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import classes from './Kv.module.scss';
-gsap.registerPlugin(ScrollTrigger);
 
 const Kv = (props) => {
-  const kvImgWrapRef = useRef('');
   const kvImgRef = useRef('');
+  const kvContRef = useRef('');
+  const scrollHandler = () => {
+    const windowPos = window.pageYOffset;
+    const kvContPos = kvContRef.current.offsetTop;
+    const progress = (kvContPos - windowPos)/kvContPos;
 
+    if (progress > 0) {
+      kvImgRef.current.style.transform = `translate3d(0, ${65 * (1 - progress)}%, 0) scale(${1 + 0.3 * (1 - progress)})`;
+    }
+  }
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: kvImgWrapRef.current,
-        start: "top top",
-        end: "bottom top",
-        // markers: true,
-        scrub: true,
-      }
-    })
-    tl.fromTo(kvImgRef.current, {scale: 1, y: "0%"}, {scale: 1.2, y: "40%"});
-
+    window.addEventListener("scroll", scrollHandler);
     return () => {
-      tl.scrollTrigger.kill();
+      window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
   
   return (
     <section id='kv'>
       <div className={classes['kv']}>
-        <div ref={kvImgWrapRef} className={classes['kv__img-wrap']}>
+        <div className={classes['kv__img-wrap']}>
           <img ref={kvImgRef} src={require('../../assets/images/kv.jpeg')} alt='kv' className={classes['kv__img']} />
         </div>
-        <div className={classes['kv__cont']}>
+        <div ref={kvContRef} className={classes['kv__cont']}>
           <div className={classes['kv__tit']}>윤여웅 <span className={classes['kv__tit-and']}>&</span> 유은솔</div>
           <div className={classes['kv__tit-sub']}>2022.00.00 Sat 12:00</div>
         </div>

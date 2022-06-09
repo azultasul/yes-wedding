@@ -25,4 +25,13 @@
       bottom: 15px;
     }
   }
+  &-wrap {
+    position: relative;
+    padding-top: 67.3%;
+  }
+  &-inr {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

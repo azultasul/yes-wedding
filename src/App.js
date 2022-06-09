@@ -8,48 +8,26 @@ import Contact from './section/contact/Contact';
 import firebase from './util/firebase';
 import Footer from './section/footer/Footer';
 
-import { gsap } from "gsap";
-// import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
 import './App.scss';
 
-// gsap.registerPlugin(ScrollTrigger);
-
-
 function App() {
-  useEffect(() => {
-    const gsapOpacity = document.querySelectorAll("[data-gsap*='opacity']");
-    const gsapShowUp = document.querySelectorAll("[data-gsap*='show-up']");
-    console.log("gsapOpacity", gsapOpacity);
-    gsapOpacity.forEach(item => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom-=20",
-          end: "top center+=100",
-          // markers: true,
-          scrub: true,
-        }
-      })
-      tl.fromTo(item, {opacity: 0}, {opacity: 1});
-    });
+  const scrollHandler = () => {
+    const gsapShowUp = document.querySelectorAll("[data-gsap]");
+    const windowPos = window.pageYOffset + window.innerHeight;
     gsapShowUp.forEach(item => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom-=20",
-          end: "top center+=250",
-          markers: true,
-          scrub: true,
-        }
-      })
-      tl.fromTo(item, {opacity: 0, y: "20%"}, {opacity: 1, y: "0px"});
-    });
-
+      if ( windowPos > item.offsetTop) {
+        item.classList.add('animate');
+      } else {
+        item.classList.remove('animate');
+      }
+    })
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
     return () => {
-      // tl.scrollTrigger.kill();
+      window.removeEventListener("scroll", scrollHandler);
     };
-  }, []);
+  });
 
   return (
     <div className="App">

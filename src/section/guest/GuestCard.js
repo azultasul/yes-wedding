@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { SplideSlide } from '@splidejs/react-splide';
 import Slider from '../../components/Slider';
@@ -18,13 +18,15 @@ const GuestCard = (props) => {
   ))
 
   return (
-    <Fragment>
-      <Slider
-        dataSplide='{
-          "type":"loop", "perPage":2, "perMove":2, "padding":"20px", "gap":"10px", "width":"100%", "pagination": false, "arrows": false
-        }'
-      >{sliderContent}</Slider>
-    </Fragment>
+    <div className={classes['card-wrap']}>
+      <div className={classes['card-inr']}>
+        <Slider
+          dataSplide='{
+            "type":"loop", "perPage":2, "perMove":2, "padding":"20px", "gap":"2%", "width":"100%", "pagination": false, "arrows": false
+          }'
+        >{sliderContent}</Slider>
+      </div>
+    </div>
   )
 }
 
