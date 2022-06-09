@@ -58,14 +58,14 @@ const Contact = (props) => {
 
   return (
     <section id='contact'>
-      <div data-gsap="opacity" className='section-flower'>🌹</div>
-      <h2 data-gsap="show-up">마음 전하기</h2>
-      <div data-gsap="show-up" className={`${classes['contact__self']}`}>
+      <div data-scroll-target="opacity" className='section-flower'>🌹</div>
+      <h2 data-scroll-target="show-up">마음 전하기</h2>
+      <div data-scroll-target="show-up" className={`${classes['contact__self']}`}>
         <ContactItem contactItem={contactInfo.groom.self}></ContactItem>
         <ContactItem contactItem={contactInfo.bride.self}></ContactItem>
       </div>
-      <h2 data-gsap="show-up" className={`${classes['contact__parent']}`}>혼주에게 전하기</h2>
-      <div data-gsap="show-up" className={`${classes['contact__parent-wrap']}`}>
+      <h2 data-scroll-target="show-up" className={`${classes['contact__parent']}`}>혼주에게 전하기</h2>
+      <div data-scroll-target="show-up" className={`${classes['contact__parent-wrap']}`}>
         <div className={`${classes['parent']}`}>
           <span className={`${classes['parent__cat']}`}>신랑측 혼주</span>
           <ContactItem contactItem={contactInfo.groom.father}></ContactItem>

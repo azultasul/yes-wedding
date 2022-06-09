@@ -22,7 +22,7 @@ const Calendar = (props) => {
   
   return (
     <section>
-      <div data-gsap="show-up">
+      <div data-scroll-target="show-up">
         <div className={`${classes['date']}`}>
           <div className={`${classes['date__day']}`}>12월 12일</div>
           <div className={`${classes['date__time']}`}>토요일 오후 12시 00분</div>
@@ -74,7 +74,7 @@ const Calendar = (props) => {
             <div>31</div>
         </div>
       </div>
-      <div data-gsap="show-up" className={`${classes['count']}`}>
+      <div data-scroll-target="show-up" className={`${classes['count']}`}>
         여웅 <span className={`${classes['count__heart']}`}>♥︎</span> 은솔의 결혼식이 {text}
       </div>
     </section>

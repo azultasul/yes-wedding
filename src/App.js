@@ -12,9 +12,9 @@ import './App.scss';
 
 function App() {
   const scrollHandler = () => {
-    const gsapShowUp = document.querySelectorAll("[data-gsap]");
+    const scrollTargetShowUp = document.querySelectorAll("[data-scroll-target]");
     const windowPos = window.pageYOffset + window.innerHeight;
-    gsapShowUp.forEach(item => {
+    scrollTargetShowUp.forEach(item => {
       if ( windowPos > item.offsetTop) {
         item.classList.add('animate');
       } else {

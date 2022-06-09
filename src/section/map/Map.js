@@ -25,13 +25,13 @@ const Map = (props) => {
 
   return (
     <section id='map'>
-      <div data-gsap="opacity" className='section-flower'>🌺</div>
-      <h2 data-gsap="show-up">오시는 길</h2>
-      <h3 data-gsap="show-up" className={classes['place']}>
+      <div data-scroll-target="opacity" className='section-flower'>🌺</div>
+      <h2 data-scroll-target="show-up">오시는 길</h2>
+      <h3 data-scroll-target="show-up" className={classes['place']}>
         상록아트홀 L층 그랜드볼룸홀<br/>
         서울 강남구 언주로 508
       </h3>
-      <div data-gsap="show-up">
+      <div data-scroll-target="show-up">
         <div id="map-cont" className={classes.cont}></div>
         <div className={classes['btn-wrap']}>
           <a href="//map.kakao.com/link/map/18577297" className={classes['btn']}>
@@ -49,7 +49,7 @@ const Map = (props) => {
         </div>
       </div>
 
-      <div data-gsap="show-up" className={classes['info']}>
+      <div data-scroll-target="show-up" className={classes['info']}>
         <div className={classes['info__tit']}>자가용</div>
         <p className={classes['info__cont']}>
           • 네비게이션 이용시 : “서울상록회관” 또는 “서울시 강남구 언주로 508” 입력<br/>
